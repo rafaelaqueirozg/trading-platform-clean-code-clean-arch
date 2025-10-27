@@ -1,0 +1,10 @@
+{
+  "name": "trading-platform-clean-code-clean-arch",
+  "version": "1.0.0",
+  "scripts": {
+    "compose:up": "docker compose -f docker/docker-compose.yaml up -d",
+    "compose:down": "docker compose -f docker/docker-compose.yaml down -v"
+  },
+  "author": "Rafaela Queiroz",
+  "license": "ISC"
+}
