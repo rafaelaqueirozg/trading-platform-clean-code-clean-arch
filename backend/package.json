@@ -1,24 +1,25 @@
 {
-  "name": "trading-platform-clean-code-clean-arch",
+  "name": "trading-platform-clean-code-clean-arch-back",
   "version": "1.0.0",
-  "main": "main.ts",
+  "main": "api.ts",
   "scripts": {
     "test": "npx jest",
     "test:watch": "npx jest --watch",
-    "start": "ts-node src/main.ts",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec npm start"
+    "dev": "npx nodemon src/api.ts"
   },
   "author": "Rafaela Queiroz",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "axios": "^1.12.2",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "pg-promise": "^12.2.0",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",
