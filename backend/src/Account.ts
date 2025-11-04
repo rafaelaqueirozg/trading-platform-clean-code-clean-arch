@@ -25,6 +25,29 @@ export default class Account {
   static build(accountBuilder: AccountBuilder) {
     return Account.create(accountBuilder.name, accountBuilder.email, accountBuilder.document, accountBuilder.password);
   }
+
+  deposit(assetId: string, quantity: number) {
+    if (quantity <= 0) throw new Error("Quantity must be positive");
+    const asset = this.assets.find((asset: Asset) => asset.assetId === assetId);
+    if (asset) {
+      asset.quantity += quantity;
+    } else {
+      this.assets.push(new Asset(assetId, quantity));
+    }
+  }
+
+  withdraw(assetId: string, quantity: number) {
+    if (quantity <= 0) throw new Error("Quantity must be positive");
+    const asset = this.assets.find((asset: Asset) => asset.assetId === assetId);
+    if (!asset || quantity > asset.quantity) throw new Error("Insufficient funds");
+    asset.quantity -= quantity;
+  }
+
+  getBalance(assetId: string) {
+    const asset = this.assets.find((asset: Asset) => asset.assetId === assetId);
+    if (!asset) return 0;
+    return asset.quantity;
+  }
 }
 
 type AccountBuilder = {
