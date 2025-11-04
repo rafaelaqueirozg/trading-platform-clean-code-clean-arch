@@ -1,4 +1,4 @@
-import Account from "../src/Account";
+import Account from "../src/domain/Account";
 
 it("should create an account", () => {
   expect(Account.create("John Doe", "john.doe@gmail.com", "97456321558", "asdQWE123")).toBeInstanceOf(Account);

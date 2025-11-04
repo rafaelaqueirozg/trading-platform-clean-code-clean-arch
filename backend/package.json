@@ -11,17 +11,20 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@hapi/hapi": "^21.4.3",
     "axios": "^1.12.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "pg-promise": "^12.2.0",
+    "restify": "^11.1.0",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/jest": "^29.5.12",
+    "@types/restify": "^8.5.12",
     "jest": "^29.7.0",
     "nodemon": "^3.1.10",
     "ts-jest": "^29.4.5",
